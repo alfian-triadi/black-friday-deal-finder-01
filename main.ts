@@ -1,14 +1,16 @@
 // Black Friday Deal Finder 2026 — entry program (Node 22, standard library
 // only). The site is this directory's app/ folder: plain static files a
-// browser opens at app/index.html (ES modules, CSS, no build step), its
-// twenty deals held in its own data file, each checked on 27 Nov 2026 at
-// the store or in a deals source that names the store. Nothing the site
+// browser opens at app/index.html (ES modules, CSS, no build step). Its
+// twenty deals are held in the site's own data file, each one checked on
+// 27 Nov 2026 at its store (price, usual price and check time recorded per
+// deal), so the page never needs the network to render. Nothing the site
 // runs, styles or shows loads over the network; each deal links out to its
 // store. The program hands the entry in: it copies app/ and screenshots/
 // from beside this file to /output and writes /output/dossier.json with
 // the vendored make.fun library. Leave vendor/makefun-frontend.ts as it
 // is: the scorer requires dossier.json to be byte for byte what its own
-// copy writes.
+// copy writes. The copy is deterministic: same input files, same output
+// bytes on every run.
 //
 // Serve it locally with `node serve.ts`, then open http://localhost:8080.
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
