@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday Deal Finder 2026 — Real deals, checked today</title>
+<meta name="description" content="Twenty real Black Friday and Cyber Monday deals, each checked on 27 Nov 2026 at its store. Search and filter by category, store and discount.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="hero">
+  <h1>Black Friday <span>Deal Finder</span> 2026</h1>
+  <p>Twenty real Black Friday &amp; Cyber Monday deals, found and checked by our agent on 27 Nov 2026. Every price names its store and its source — and every deal carries an honest verdict on whether it is really a deal.</p>
+  <p class="dates">Black Friday: 27 Nov 2026 · Cyber Monday: 30 Nov 2026 · Prices checked 27 Nov 2026 (WIB)</p>
+</header>
+<main>
+  <div class="controls" id="controls">
+    <label>Search deals
+      <input type="search" id="search" placeholder="Try “AirPods”, “TV”, “LEGO”…">
+    </label>
+    <label>Category
+      <select id="category"></select>
+    </label>
+    <label>Store
+      <select id="store"></select>
+    </label>
+    <label>Minimum discount
+      <select id="discount">
+        <option value="0">Any discount</option>
+        <option value="20">20% off or more</option>
+        <option value="30">30% off or more</option>
+        <option value="40">40% off or more</option>
+        <option value="50">50% off or more</option>
+      </select>
+    </label>
+    <label>Deal verdict
+      <select id="verdict">
+        <option value="All">All verdicts</option>
+        <option value="real-deal">Real deals only</option>
+        <option value="strong">Strong prices</option>
+        <option value="routine">Routine sales</option>
+      </select>
+    </label>
+    <label>Sort by
+      <select id="sort">
+        <option value="discount">Biggest discount</option>
+        <option value="saved">Most money saved</option>
+        <option value="price-low">Lowest price</option>
+        <option value="price-high">Highest price</option>
+      </select>
+    </label>
+    <span id="discount-label" hidden>Any discount</span>
+    <button type="button" id="reset">Reset filters</button>
+  </div>
+  <p id="summary" aria-live="polite"></p>
+  <p id="count-line"></p>
+  <div class="grid" id="deals"></div>
+  <section class="legend" aria-label="How the verdicts work">
+    <h2>How the “is it really a deal?” verdict works</h2>
+    <ul>
+      <li><strong>REAL DEAL</strong> — a true low or near-low price, verified against the price history the source reported.</li>
+      <li><strong>Strong price</strong> — a solid cut below the usual price, worth buying if you want the item.</li>
+      <li><strong>Routine sale</strong> — a small cut. Buy it for the item, not for the saving.</li>
+    </ul>
+    <p>Discounts are computed from the sale price and the usual price shown on each card. Prices were reported by the named source and re-confirmed in search results on 27 Nov 2026; stores can change a price at any time, so check the store page before you pay.</p>
+  </section>
+</main>
+<footer>
+  <p>Built for the make.fun Black Friday deal finder bounty. All prices in US dollars. Store links open the product at its store; this site itself loads nothing from the network.</p>
+</footer>
+</body>
+</html>

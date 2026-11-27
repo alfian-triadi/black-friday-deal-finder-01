@@ -1,0 +1,199 @@
+:root {
+  --ink: #1c1917;
+  --muted: #57534e;
+  --paper: #fffbeb;
+  --card: #ffffff;
+  --line: #e7e5e4;
+  --accent: #b91c1c;
+  --accent-dark: #7f1d1d;
+  --gold: #b45309;
+  --green: #166534;
+  --green-bg: #dcfce7;
+  --amber-bg: #fef3c7;
+  --red-bg: #fee2e2;
+  --grey-bg: #f5f5f4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+header.hero {
+  background: #1c1917;
+  color: #fafaf9;
+  padding: 2.5rem 1rem 2rem;
+  text-align: center;
+}
+
+header.hero h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
+
+header.hero h1 span { color: #fbbf24; }
+
+header.hero p { margin: 0.25rem auto; max-width: 46rem; color: #d6d3d1; }
+
+header.hero .dates {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #fbbf24;
+}
+
+main { max-width: 72rem; margin: 0 auto; padding: 1rem; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: end;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  gap: 0.25rem;
+}
+
+.controls input[type="search"],
+.controls select {
+  font: inherit;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: var(--ink);
+  min-width: 9rem;
+}
+
+.controls input[type="search"] { min-width: 14rem; }
+
+.controls button {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d6d3d1;
+  background: var(--grey-bg);
+  cursor: pointer;
+}
+
+#summary {
+  background: var(--amber-bg);
+  border: 1px solid #fcd34d;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+#count-line { color: var(--muted); font-size: 0.9rem; margin: 0 0 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.store { font-weight: 700; color: var(--accent-dark); }
+.category { color: var(--muted); }
+
+.badge {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.badge-real-deal { background: var(--green-bg); color: var(--green); }
+.badge-strong { background: var(--amber-bg); color: var(--gold); }
+.badge-routine { background: var(--grey-bg); color: var(--muted); }
+
+.card h2 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+
+.prices { margin: 0; display: flex; gap: 0.6rem; align-items: baseline; }
+.sale { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+.regular { text-decoration: line-through; color: var(--muted); }
+.off { font-weight: 700; color: var(--green); }
+
+.saved { margin: 0; font-weight: 600; color: var(--green); }
+.verdict-note { margin: 0; font-size: 0.92rem; }
+.meta { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+.cta {
+  margin-top: auto;
+  display: inline-block;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.cta:hover { background: var(--accent-dark); }
+
+.empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 2rem; }
+
+.legend {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.92rem;
+}
+
+.legend h2 { margin: 0 0 0.5rem; font-size: 1.05rem; }
+.legend ul { margin: 0; padding-left: 1.2rem; }
+
+footer {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 40rem) {
+  header.hero h1 { font-size: 1.6rem; }
+  .controls input[type="search"] { min-width: 100%; }
+  .grid { grid-template-columns: 1fr; }
+}
